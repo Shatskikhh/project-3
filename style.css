@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "TTLakes";
+  font-style: normal;
+  font-weight: normal;
+  src: local("TTLakes-regular"), url("./fonts/TTLakes-Regular.woff");
+}
+
+body {
+  font-family: "TTLakes", sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.brand__tech {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand__lenovo {
+  background-image: url("./image/lenovo.svg");
+}
+
+.brand__samsung {
+  background-image: url("./image/samsung.svg");
+}
+
+.brand__apple {
+  background-image: url("./image/apple.svg");
+}
+
+.brand__viewsonic {
+  background-image: url("./image/viewsonic.svg");
+}
+
+.brand__hp {
+  background-image: url("./image/hp.svg");
+}
+
+.brand__sony {
+  background-image: url("./image/sony.svg");
+}
+
+.brand__acer {
+  background-image: url("./image/acer.svg");
+}
+
+.brand__bosch {
+  background-image: url("./image/bosch.svg");
+}
+
+.field {
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  width: 130px;
+  height: 50px;
+}
