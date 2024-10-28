@@ -11,47 +11,106 @@ body {
   background-color: #f8f8f8;
 }
 
-.brand__tech {
+.card__list {
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-.brand__lenovo {
+.wrapper {
+  min-width: 320px;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+.card__items {
+  flex-basis: 240px;
+  height: 72px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 8px;
+}
+
+.card__link {
+  display: inline-block;
+  width: 100%;
+  height: 72px;
+  transition: opacity 0.3s;
+}
+
+.lenovo {
   background-image: url("./image/lenovo.svg");
-}
-
-.brand__samsung {
-  background-image: url("./image/samsung.svg");
-}
-
-.brand__apple {
-  background-image: url("./image/apple.svg");
-}
-
-.brand__viewsonic {
-  background-image: url("./image/viewsonic.svg");
-}
-
-.brand__hp {
-  background-image: url("./image/hp.svg");
-}
-
-.brand__sony {
-  background-image: url("./image/sony.svg");
-}
-
-.brand__acer {
-  background-image: url("./image/acer.svg");
-}
-
-.brand__bosch {
-  background-image: url("./image/bosch.svg");
-}
-
-.field {
+  background-position: 16px, 160px;
   background-repeat: no-repeat;
-  background-color: #ffffff;
-  width: 130px;
-  height: 50px;
+  background-color: white;
+}
+
+.samsung {
+  background-image: url("./image/samsung.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.apple {
+  background-image: url("./image/apple.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.viewsonic {
+  background-image: url("./image/viewsonic.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.hp {
+  background-image: url("./image/hp.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.sony {
+  background-image: url("./image/sony.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.acer {
+  background-image: url("./image/acer.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.bosch {
+  background-image: url("./image/bosch.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.hidden_brand {
+  display: none;
+}
+
+.visible_brand {
+  display: block;
+}
+
+.show {
+  display: none;
 }

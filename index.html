@@ -9,20 +9,48 @@
     <title>Ремонт техники CPS</title>
 </head>
 
-<body>
-    <section class="brand">
-        <h2 class="brand__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
-        <ul class="brand__tech">
-            <li class="brand__lenovo field"></li>
-            <li class="brand__samsung field"></li>
-            <li class="brand__apple field"></li>
-            <li class="brand__viewsonic field"></li>
-            <li class="brand__hp field"></li>
-            <li class="brand__sony field"></li>
-            <li class="brand__acer field"></li>
-            <li class="brand__bosch field"></li>
-        </ul>
-    </section>
+<body class="page">
+    <div class="wrapper">
+        <main class="content">
+            <section class="brands">
+                <div class="card__container swiper">
+                    <h2 class="brand__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
+                    <div class="swiper">
+                        <ul class="card__list swiper-wrapper">
+                            <li class="card__items swiper-slide">
+                                <a class="card__link lenovo " href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items swiper-slide">
+                                <a class="card__link samsung" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items swiper-slide">
+                                <a class="card__link apple" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items swiper-slide">
+                                <a class="card__link viewsonic" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items field hidden_brand swiper-slide">
+                                <a class="card__link hp" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items field hidden_brand swiper-slide">
+                                <a class="card__link sony" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items field hidden_brand swiper-slide">
+                                <a class="card__link acer" href="#" target="_blank"></a>
+                            </li>
+                            <li class="card__items field hidden_brand swiper-slide">
+                                <a class="card__link bosch" href="#" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <button type="button" class="change__btn revert hidden show">
+        Показать всё
+    </button>
+    <div class="swiper-pagination"></div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
