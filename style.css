@@ -1,20 +1,37 @@
+html {
+  box-sizing: border-box;
+  margin-top: -15px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 @font-face {
   font-family: "TTLakes";
   font-style: normal;
-  font-weight: normal;
-  src: local("TTLakes-regular"), url("./fonts/TTLakes-Regular.woff");
+  font-weight: 100;
+  src: local("TTLakes-regular"), url("/fonts/TTLakes-Regular.woff");
+  color: #7e7e82;
+}
+
+.header__title {
+  font-family: TTLakes;
+  font-size: 16;
+  height: 60px;
+  margin-left: 12px;
+  color: #7e7e82;
+  background: linear-gradient(to right, #f8f8f8, white);
 }
 
 body {
-  font-family: "TTLakes", sans-serif;
   margin: 0;
+  padding: 0;
+  font-family: "TT Lakes regular", "Arial", sans-serif;
+  box-shadow: 0 -1px #d9fff5;
   background-color: #f8f8f8;
-}
-
-.card__list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
 }
 
 .wrapper {
@@ -24,20 +41,43 @@ body {
   position: relative;
 }
 
-.swiper-pagination {
-  display: flex;
-  justify-content: center;
-  transition: 0.3s opacity;
-  transform: translate3d(0, 0, 0);
+.header__title {
+  margin: 16px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #7e7e82;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
-.card__items {
+.card__container {
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.cards-list {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  left: -27px;
+  top: -4px;
+}
+
+.card__item {
   flex-basis: 240px;
   height: 72px;
   border: 1px solid #eaeaea;
-  border-radius: 8px;
+  border-radius: 6px;
   box-sizing: border-box;
   margin: 8px;
+}
+
+.card__item:first-of-type {
+  margin-left: 0;
 }
 
 .card__link {
@@ -47,70 +87,162 @@ body {
   transition: opacity 0.3s;
 }
 
-.lenovo {
-  background-image: url("./image/lenovo.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.samsung {
-  background-image: url("./image/samsung.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.apple {
-  background-image: url("./image/apple.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.viewsonic {
-  background-image: url("./image/viewsonic.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.hp {
-  background-image: url("./image/hp.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.sony {
-  background-image: url("./image/sony.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.acer {
-  background-image: url("./image/acer.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.bosch {
-  background-image: url("./image/bosch.svg");
-  background-position: 16px, 160px;
-  background-repeat: no-repeat;
-  background-color: white;
-}
-
-.hidden_brand {
+.hidden {
   display: none;
 }
 
-.visible_brand {
-  display: block;
+.lenovo {
+  background: url("/image/lenovo.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.samsung {
+  background: url("/image/samsung.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.apple {
+  background: url("/image/apple.svg"), url("/image/go.svg");
+
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.viewSonic {
+  background: url("/image/viewsonic.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.bosch {
+  background: url("/image/bosch.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.hp {
+  background: url("/image/hp.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.acer {
+  background: url("/image/acer.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.sony {
+  background: url("/image/sony.svg"), url("/image/go.svg");
+  background-position: 16px, 160px;
+  background-repeat: no-repeat;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+}
+
+.change__btn {
+  border: none;
+  padding: 0;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: TTLakes;
+}
+
+.change__btn::before {
+  content: "";
+  background-image: url("./image/icon.svg");
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  margin-left: -5px;
+  display: inline-block;
 }
 
 .show {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .revert::before {
+    content: "";
+    transform: rotate(180deg);
+  }
+
+  .change__btn {
+    display: flex;
+    width: 133px;
+  }
+
+  .header__title {
+    width: 100%;
+  }
+
+  .card__item {
+    flex-basis: 222px;
+    margin: 0;
+  }
+
+  .card__link {
+    width: 222px;
+  }
+
+  .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 26px;
+    position: static;
+    max-width: 768px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .card__item:nth-child(7),
+  .card__item:nth-child(8) {
+    display: block;
+  }
+
+  .card__item {
+    flex-basis: 240px;
+    margin: 0;
+  }
+
+  .card__link {
+    width: 100%;
+  }
+
+  .cards-list {
+    gap: 16px 32px;
+
+    min-width: 1120px;
+  }
+
+  .card__container {
+    margin-top: 15px;
+  }
 }

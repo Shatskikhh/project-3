@@ -1,24 +1,47 @@
-const showMoreBtn = document.querySelector(".change__btn");
-const brands = document.querySelectorAll(".hidden_brand");
-const slider = document.querySelector(".swipper");
-const cardItem = document.querySelectorAll(".card__items");
-const card = document.querySelectorAll(".card");
+const showBtn = document.querySelector(".change__btn");
+const cardContainer = document.querySelector(".card__container");
+const cardItem = cardContainer.querySelectorAll(".card__item");
 
-for (let i = 0; i < brands.length; i++) {
-  cardItem[i].classList.remove("hidden_brand");
-  // toggleBtn(cardItem[i]);
+for (let i = 6; i < cardItem.length; i++) {
+  cardItem[i].classList.remove("hidden");
+  toggleBtn(cardItem[i]);
 }
 
-function toogleBtn(item) {
-  showMoreBtn.addEventListener("click", function () {
-    if (brand.classList.contains("hidden_brand")) {
-      showMoreBtn.textContent = "скрыть";
-      brand.classList.add("visible_brand");
-      brand.classList.remove("hidden_brand");
+function toggleBtn(item) {
+  showBtn.addEventListener("click", function () {
+    if (item.classList.contains("hidden")) {
+      showBtn.textContent = "Скрыть";
+      showBtn.classList.add("revert");
+      item.classList.remove("hidden");
     } else {
-      showMoreBtn.textContent = "Показать всё";
-      brand.classList.add("hidden_brand");
-      brand.classList.remove("visible_brand");
+      showBtn.textContent = "Показать все";
+      showBtn.classList.remove("revert");
+      item.classList.add("hidden");
     }
   });
 }
+
+var init = false;
+var swiper;
+function swiperCard() {
+  if (window.innerWidth <= 767) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
