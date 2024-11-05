@@ -1,3 +1,4 @@
 # project-3
-brands
-https://github.com/Shatskikhh/project-3.git
+
+проверить практическую задачу
+https://shatskikhh.github.io/project-3/
