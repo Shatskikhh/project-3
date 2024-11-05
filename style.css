@@ -13,7 +13,7 @@ html {
   font-family: "TTLakes";
   font-style: normal;
   font-weight: 100;
-  src: local("TTLakes-regular"), url("/fonts/TTLakes-Regular.woff");
+  src: local("TTLakes-regular"), url("./fonts/TTLakes-Regular.woff");
   color: #7e7e82;
 }
 
@@ -92,50 +92,50 @@ body {
 }
 
 .lenovo {
-  background: url("/image/lenovo.svg"), url("/image/go.svg");
+  background: url("./image/lenovo.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .samsung {
-  background: url("/image/samsung.svg"), url("/image/go.svg");
+  background: url("./image/samsung.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .apple {
-  background: url("/image/apple.svg"), url("/image/go.svg");
+  background: url("./image/apple.svg"), url("./image/go.svg");
 
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .viewSonic {
-  background: url("/image/viewsonic.svg"), url("/image/go.svg");
+  background: url("./image/viewsonic.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .bosch {
-  background: url("/image/bosch.svg"), url("/image/go.svg");
+  background: url("./image/bosch.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .hp {
-  background: url("/image/hp.svg"), url("/image/go.svg");
+  background: url("./image/hp.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .acer {
-  background: url("/image/acer.svg"), url("/image/go.svg");
+  background: url("./image/acer.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
 
 .sony {
-  background: url("/image/sony.svg"), url("/image/go.svg");
+  background: url("./image/sony.svg"), url("./image/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
 }
