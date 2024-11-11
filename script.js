@@ -2,25 +2,23 @@ const showBtn = document.querySelector(".change__btn");
 const cardContainer = document.querySelector(".card__container");
 const cardItem = cardContainer.querySelectorAll(".card__item");
 
-function toggleHiddenItems() {
-  for (let i = 6; i < cardItem.length; i++) {
-    cardItem[i].classList.toggle("hidden");
-  }
+for (let i = 6; i < cardItem.length; i++) {
+  cardItem[i].classList.toggle("hidden");
+  toggleBtn(cardItem[i]);
 }
-
-// Обработчик события для кнопки
-showBtn.addEventListener("click", function () {
-  toggleHiddenItems();
-
-  // Меняем текст и класс кнопки в зависимости от состояния элементов
-  if (cardItem[6].classList.contains("hidden")) {
-    showBtn.textContent = "Показать все";
-    showBtn.classList.remove("revert");
-  } else {
-    showBtn.textContent = "Скрыть";
-    showBtn.classList.add("revert");
-  }
-});
+function toggleBtn(item) {
+  showBtn.addEventListener("click", function () {
+    if (item.classList.contains("hidden")) {
+      showBtn.textContent = "Скрыть";
+      showBtn.classList.toggle("revert");
+      item.classList.toggle("hidden");
+    } else {
+      showBtn.textContent = "Показать все";
+      showBtn.classList.toggle("revert");
+      item.classList.toggle("hidden");
+    }
+  });
+}
 
 let init = false;
 let swiper;
