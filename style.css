@@ -181,6 +181,7 @@ body {
   margin-right: 10px;
   margin-left: -5px;
   display: inline-block;
+  transform: rotate(180deg);
 }
 
 .show {
@@ -190,7 +191,7 @@ body {
 @media screen and (min-width: 768px) {
   .revert::before {
     content: "";
-    transform: rotate(180deg);
+    transform: rotate(0deg);
   }
 
   .change__btn {

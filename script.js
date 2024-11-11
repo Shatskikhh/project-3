@@ -8,15 +8,11 @@ for (let i = 6; i < cardItem.length; i++) {
 }
 function toggleBtn(item) {
   showBtn.addEventListener("click", function () {
-    if (item.classList.contains("hidden")) {
-      showBtn.textContent = "Скрыть";
-      showBtn.classList.toggle("revert");
-      item.classList.toggle("hidden");
-    } else {
-      showBtn.textContent = "Показать все";
-      showBtn.classList.toggle("revert");
-      item.classList.toggle("hidden");
-    }
+    item.classList.toggle("hidden");
+    showBtn.classList.toggle("revert");
+    showBtn.textContent = item.classList.contains("hidden")
+      ? "Показать все"
+      : "Скрыть";
   });
 }
 
